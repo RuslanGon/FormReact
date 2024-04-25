@@ -6,5 +6,4 @@ const MailBoxItem = ({user}) => {
     )
   }
   
-  
   export default MailBoxItem
