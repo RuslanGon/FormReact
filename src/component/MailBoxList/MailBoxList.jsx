@@ -1,4 +1,5 @@
-import MailBoxItem from "../MailBox/MailBoxItem/MailBoxItem";
+
+import MailBoxItem from "../MailBoxItem/MailBoxItem";
 import css from "./MailBoxList.module.css";
 
 const MailBoxList = ({ boxUsers }) => {
