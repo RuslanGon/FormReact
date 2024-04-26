@@ -16,11 +16,7 @@ function App() {
 
   return (
    <div>
-    <MailBox boxTitle="Meest Express"  boxUsers={MeestExpressUser } />
-    
-    
-      
-  
+    <MailBox boxTitle="Meest Express"  boxUsers={MeestExpressUser} />
     
    </div>
   )

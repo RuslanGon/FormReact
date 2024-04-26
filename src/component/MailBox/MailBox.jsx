@@ -1,18 +1,17 @@
-import MailBoxList from '../MailBoxList/MailBoxList';
-import css from './MailBox.module.css'
+import MailBoxItem from "../MailBoxItem/MailBoxItem";
+import css from "./MailBox.module.css";
 
-
-const MailBox = ({boxTitle, boxUsers}) => {
-  
-
-
+const MailBox = ({ boxTitle, boxUsers }) => {
   return (
     <div>
-        <h2 className={css.desc}>{boxTitle}</h2>
-      
-      <MailBoxList boxUsers={boxUsers} />
+      <h2 className={css.desc}>{boxTitle}</h2>
+      <ul className={css.mailBoxlist}>
+        {boxUsers.map((user) => {
+          return <MailBoxItem user={user} key={user.id} />;
+        })}
+      </ul>
     </div>
-  )
-}
+  );
+};
 
-export default MailBox
+export default MailBox;
