@@ -1,14 +1,15 @@
 
-const MailBoxForm = () => {
-
+const MailBoxForm = ({onAddUsers}) => {
     const handleSubmit = (event) => {
         event.preventDefault()
         const userEmail = event.currentTarget.elements.userEmail.value
         const userName = event.currentTarget.elements.userName.value
-        console.log(userEmail);
-        console.log(userName);
+        const formData = {
+            userEmail,
+            userName
+        }
+        onAddUsers(formData)
     }
-
   return (
    <form onSubmit={handleSubmit}>
     <h2>Add new users</h2>
