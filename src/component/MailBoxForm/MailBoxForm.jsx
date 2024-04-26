@@ -6,13 +6,15 @@ const MailBoxForm = () => {
     <label>
         <span>User email</span>
         <br />
-        <input type="text" name="userEmail" placeholder="email" />
+        <input type="email" name="userEmail" placeholder="@email" required />
     </label>
+    <br />
+    <button type="submit"> ▶ Create new users</button>
     <br />
     <label>
         <span>User name</span>
         <br />
-        <input type="text" name="userName" placeholder="name" />
+        <input type="text" name="userName" placeholder="name" required />
     </label>
    </form>
   )
