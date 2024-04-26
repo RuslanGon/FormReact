@@ -17,12 +17,18 @@ function App() {
     }
     // setUsers([...users, finalUser ])
     setUsers((pevState) => [...pevState,finalUser])
+
+
+    const onDeleteUsers = (userid) => {
+      setUsers((prevUsers) => prevUsers.filter((user) => user.id !== userid));
+    };
+
   }
 
   return (
    <div>
     <MailBoxForm onAddUsers={onAddUsers} />
-    <MailBox boxTitle="Meest Express"  boxUsers={users} />
+    <MailBox boxTitle="Meest Express"  boxUsers={users} onDeleteUsers={onDeleteUsers} />
    </div>
   )
 }
