@@ -11,12 +11,12 @@ function App() {
   const [users, setUsers] = useState(MeestExpressUser)
 
   const onAddUsers = (formData) => {
-    const finalUsers = {
+    const finalUser = {
       ...formData,
       id: nanoid()
     }
-    // setUsers([...users, finalUsers])
-    setUsers((pevState) => {pevState, finalUsers})
+    // setUsers([...users, finalUser ])
+    setUsers((pevState) => [...pevState,finalUser])
   }
 
   return (
