@@ -7,15 +7,6 @@
     "userName": "Lena"},
     { "id": "3", 
     "userEmail": "ira@gmail.com",
-    "userName": "Marina"},
-    { "id": "4",
-     "userEmail": "igor@gmail.com",
-     "userName": "Marina"},
-    { "id": "5",
-     "userEmail": "pety@gmail.com",
-     "userName": "Oleg" },
-    { "id": "6",
-     "userEmail": "ruslan@gmail.com", 
-     "userName": "Karina" }
+    "userName": "Marina"}
     
   ]
