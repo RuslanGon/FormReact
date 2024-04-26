@@ -16,7 +16,8 @@ function App() {
       ...formData,
       id: nanoid()
     }
-    setUsers([...users, finalUsers])
+    // setUsers([...users, finalUsers])
+    setUsers((pevState) => {pevState, finalUsers})
   }
 
  
