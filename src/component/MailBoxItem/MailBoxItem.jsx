@@ -6,7 +6,8 @@ const MailBoxItem = ({user, onDeleteUsers}) => {
       <li>
         <p>Email: {user.userEmail}</p>
         <p>Name: {user.userName}</p>
-        <button type="button" onClick={onDeleteUsers}>❌ Delete user</button>
+        <button type="button" onClick={() => onDeleteUsers(user.id)}>❌ Delete user</button>
+    
       </li>
       
       
