@@ -2,7 +2,10 @@
 
 const MailBoxItem = ({user}) => {
     return (
-      <li>userEmail: {user.userEmail}</li>
+      <>
+      <li>Email: {user.userEmail}</li>
+      <li>Name: {user.userName}</li>
+      </>
     )
   }
   

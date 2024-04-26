@@ -9,6 +9,7 @@ const MailBoxForm = ({onAddUsers}) => {
             userName
         }
         onAddUsers(formData)
+        event.currentTarget.reset()
     }
   return (
    <form onSubmit={handleSubmit}>
