@@ -16,7 +16,7 @@ function App() {
 
   return (
    <div>
-    <MailBox boxTitle="Meest Express" mailBoxCounter={5} boxUsers={MeestExpressUser } />
+    <MailBox boxTitle="Meest Express"  boxUsers={MeestExpressUser } />
     
     
       
