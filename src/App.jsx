@@ -8,11 +8,7 @@ import MailBoxForm from "./component/MailBoxForm/MailBoxForm";
 function App() {
   const [filter, setFilter] = useState("");
 
-  const onChangeFilter = (event) => {
-    setFilter(event.target.value)
-  }
 
-  const filterUsers = users.filter(user => user.userName.toLocaleLowerCase.includes(filter.toLocaleLowerCase))
 
 
   const [users, setUsers] = useState(() => {
@@ -38,12 +34,24 @@ function App() {
     setUsers((prevUsers) => prevUsers.filter((user) => user.id !== userId));
   };
 
+  const onChangeFilter = (event) => {
+    setFilter(event.target.value);
+  };
+  const filterUsers = users.filter((user) =>
+    user.userName.toLowerCase().includes(filter.toLowerCase()) || 
+    user.userEmail.toLowerCase().includes(filter.toLowerCase())
+  );
   return (
     <div>
       <MailBoxForm onAddUsers={onAddUsers} />
       <section>
         <h2>Search users by name or email</h2>
-        <input type="text" placeholder="search..." value={filter} onChange={onChangeFilter} />
+        <input
+          type="text"
+          placeholder="search..."
+          value={filter}
+          onChange={onChangeFilter}
+        />
       </section>
       <MailBox
         boxTitle="Meest Express"
